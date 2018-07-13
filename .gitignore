@@ -1,2 +1,4 @@
 GuitarLegend.iml
 .idea/
+*.class
+out/

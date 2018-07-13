@@ -35,7 +35,7 @@ public class GuitarLegendApp extends Application {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         GLBackground.startBgnd(gc);
-        gc.fillOval()
+        gc.fillOval();
 
         theStage.show();
 
