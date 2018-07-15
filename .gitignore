@@ -2,5 +2,5 @@ GuitarLegend.iml
 .idea/
 *.class
 out/
-.classpath/
-.project/
+.classpath
+.project
