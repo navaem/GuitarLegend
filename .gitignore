@@ -4,3 +4,5 @@ GuitarLegend.iml
 out/
 .classpath
 .project
+/.metadata/
+/bin/
