@@ -7,7 +7,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
-
 /*
 *@author Ed anva
 *@version 1.0
@@ -35,8 +34,9 @@ public class GuitarLegendApp extends Application {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         GLBackground.startBgnd(gc);
-        gc.fillOval();
-
+        //gc.fillOval();
+        Note newNote = new Note(gc);
+        newNote.drawNote();
         theStage.show();
 
 
