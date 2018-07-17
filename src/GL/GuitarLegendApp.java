@@ -38,8 +38,9 @@ public class GuitarLegendApp extends Application {
         Note newNote = new Note(gc);
         newNote.drawNote();
         theStage.show();
-
-
+        GameLoop gl = new GameLoop(gc);
+        gl.start();
+        
     }
 
 }
