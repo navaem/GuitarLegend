@@ -1,3 +1,5 @@
+import Element.Note;
+import Element.BlueNote;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
@@ -8,7 +10,7 @@ public class GameLoop extends AnimationTimer {
 	private Note[] notes;
 	
 	public GameLoop(GraphicsContext gc) {
-		Note [] notes = new Note[5];
+		Note[] notes =  new BlueNote[5];
 		for (int i = 0; i< 5; i++) {
 			notes[i] = new Note(gc);
 		}

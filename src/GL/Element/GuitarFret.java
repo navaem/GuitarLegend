@@ -1,3 +1,5 @@
+package Element;
+
 public class GuitarFret {
     private int xPos;
     private int yPos;
