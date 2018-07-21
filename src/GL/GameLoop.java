@@ -1,6 +1,11 @@
 import Element.Note;
+import Element.OrangeNote;
+import Element.RedNote;
+import Element.YellowNote;
 import Element.BlueNote;
+import Element.GreenNote;
 import javafx.animation.AnimationTimer;
+import javafx.scene.Group;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
@@ -9,10 +14,25 @@ public class GameLoop extends AnimationTimer {
 	private GraphicsContext gc;
 	private Note[] notes;
 	
-	public GameLoop(GraphicsContext gc) {
-		Note[] notes =  new BlueNote[5];
+	public GameLoop(Group root) {
+		Note[] notes =  new Note[5];
 		for (int i = 0; i< 5; i++) {
-			notes[i] = new Note(gc);
+			if (i == 0)
+				notes[i] = new BlueNote();
+			if (i == 1) {
+				notes[i] = new GreenNote();
+			}
+			if (i == 2) {
+				notes[i] = new OrangeNote();
+			}
+			if (i == 3) {
+				notes[i] = new RedNote();
+			}
+			if ( i == 4) {
+				notes[i] = new YellowNote();
+			}
+			root.getChildren().add(notes[i].getImage());
+			notes[i].drawNote();
 		}
 		this.notes = notes;
 	}
@@ -30,8 +50,9 @@ public class GameLoop extends AnimationTimer {
 
 		//update positions
 		for(Note note: notes) {
+			note.getImage();
 			note.updatePos();
-			note.drawNote();
+			
 		}
 		//fire commands
 

@@ -1,4 +1,4 @@
-package Animations
+package Animations;
 
 public class Animator {
 

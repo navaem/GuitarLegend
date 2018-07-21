@@ -1,3 +1,6 @@
+import Animations.GLBackground;
+import Element.Note;
+import Element.RedNote;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -5,6 +8,7 @@ import javafx.scene.Group;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
 /*
@@ -26,6 +30,7 @@ public class GuitarLegendApp extends Application {
     	theStage.setTitle("Guitar Legend");
 
     	Group root = new Group();
+ 
     	Scene gNeck = new Scene(root);
     	theStage.setScene(gNeck);
     	Canvas canvas = new Canvas(1280, 720);
@@ -35,10 +40,9 @@ public class GuitarLegendApp extends Application {
 
         GLBackground.startBgnd(gc);
         //gc.fillOval();
-        Note newNote = new Note(gc);
-        newNote.drawNote();
-        theStage.show();
-        GameLoop gl = new GameLoop(gc);
+
+       theStage.show();
+        GameLoop gl = new GameLoop(root);
         gl.start();
         
     }
