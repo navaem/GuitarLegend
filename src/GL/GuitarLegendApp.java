@@ -1,4 +1,5 @@
 import Animations.GLBackground;
+import Element.GuitarFret;
 import Element.Note;
 import Element.RedNote;
 import javafx.application.Application;
@@ -11,14 +12,24 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.lang.management.ThreadInfo;
+import java.util.EventListener;
+import java.util.concurrent.TimeUnit;
+
+import static java.awt.event.KeyEvent.VK_G;
+
 /*
-*@author Ed anva
+*@author Ed Nava
 *@version 1.0
 *This app will recreate a GuitarHero-like game for my enjoyment and programming
 *skill development.
 *More documentation to follow.
 */
 public class GuitarLegendApp extends Application {
+
+
 
 	//main method
 	public static void main(String[] args) {
@@ -27,6 +38,7 @@ public class GuitarLegendApp extends Application {
 
 	@Override
     public void start(Stage theStage) {
+
     	theStage.setTitle("Guitar Legend");
 
     	Group root = new Group();
@@ -39,9 +51,28 @@ public class GuitarLegendApp extends Application {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         GLBackground.startBgnd(gc);
-        //gc.fillOval();
+		theStage.show();
 
-       theStage.show();
+		GuitarFret guitar  = new GuitarFret();
+
+		//guitar.drawFretExecution();
+        root.getChildren().add(guitar.getGroup());
+//        gNeck.setOnKeyPressed((event) -> {
+//			guitar.drawFretExecution();
+//			System.out.println(event);
+//		});
+//        gNeck.setOnKeyReleased(event -> {
+//        	System.out.println(event);
+//		});
+//        gNeck.setOnKeyTyped((event)->{System.out.println(event);});
+
+
+       	//guitar.drawFretExecution();
+       	//guitar.drawFretExecution();
+
+
+		//guitar.drawFretExecution();
+
         GameLoop gl = new GameLoop(root);
         gl.start();
         

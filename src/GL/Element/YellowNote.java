@@ -2,7 +2,7 @@ package Element;
 
 public class YellowNote extends Note {
 	public YellowNote () {
-	    super(548+38+38+18,150,640,901,"yellowNote.png");
+	    super(642,150,642,911.7,"yellowNote.png");
     }
 
 @Override

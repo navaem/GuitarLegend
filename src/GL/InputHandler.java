@@ -1,3 +1,9 @@
-public class InputHandler {
+import javax.swing.*;
+
+public class InputHandler extends  JComponent{
+
+    public InputHandler(){
+
+    }
 	
 }

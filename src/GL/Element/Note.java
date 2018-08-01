@@ -16,8 +16,8 @@ import javafx.util.Duration;
 
 
 public class Note {
-	private int xPos;
-	private int yPos;
+	private double xPos;
+	private double yPos;
 	private int width;
 	private Path path;
 
@@ -29,11 +29,11 @@ public class Note {
 
 
 
-    public Note(int x,int y, int finalX,int finalY,String imageName){
+    public Note(double x,double y, double finalX,double finalY,String imageName){
     	this.xPos = x;
     	this.yPos = y;
     	this.image = new ImageView(imageName);
-    	this.path = new Path(new MoveTo(x,y),new LineTo(finalX,finalY));
+    	this.path = new Path(new MoveTo(x,y), new LineTo(finalX,finalY));
     	
 	}
     public ImageView getImage() {

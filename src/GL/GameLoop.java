@@ -42,7 +42,7 @@ public class GameLoop extends AnimationTimer {
 	public void handle(long now) {
 		//start game
 		//load pictures and song
-		//initailize scanner inputs
+		//initialize scanner inputs
 		System.out.println(now);
 		//load score counter
 		

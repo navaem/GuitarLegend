@@ -2,8 +2,8 @@ package Element;
 
 public class GreenNote extends Note {
 	public GreenNote () {
-	    super(548+15,150,430,900,"greenNote.png");
-    }
+	    super(565,150,422,902.7,"greenNote.png");
+    }//103,-593 ==761.7
 
 @Override
 public void updatePos() {

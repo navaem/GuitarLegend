@@ -13,7 +13,7 @@ public class RedNote extends Note {
 	
 	
 	public RedNote () {
-		super(548+38+17,150,531,900,"redNote.png");
+		super(603,150,530.21,908.215,"redNote.png");//72,-750 == 753.44
 	    
 	    
     }
