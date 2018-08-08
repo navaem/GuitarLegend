@@ -9,7 +9,7 @@ public class GLAnimationTimer extends AnimationTimer {
 	@Override
 	public void handle(long now) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 }
