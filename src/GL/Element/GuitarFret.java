@@ -15,11 +15,13 @@ public class GuitarFret {
     private Group fret;
     private QuadCurve quad;
     private PathTransition path;
+
+
     //constructor should initialize the guitar fret and draw it on the screen
-    public GuitarFret() {
+    public GuitarFret(Color fretColor, double xPos, double yPos) {
         this.fret = new Group();
         Ellipse outerRing = new Ellipse(207.5,80.5);
-        outerRing.setFill(Color.RED);
+        outerRing.setFill(fretColor);
         outerRing.setStroke(Color.BLACK);
         Ellipse bottom = new Ellipse(175,68);
         bottom.setFill(Color.LIGHTGREY);
@@ -30,10 +32,10 @@ public class GuitarFret {
         this.quad.setStrokeWidth(5);
         this.quad.setTranslateX(-175);
         this.fret.getChildren().addAll(outerRing,bottom,quad);
-        fret.setScaleX(10.0/50.0);
-        fret.setScaleY(10.0/50.0);
-        fret.setTranslateX(400);
-        fret.setTranslateY(400);
+        fret.setScaleX(9.0/50.0);
+        fret.setScaleY(9.0/50.0);
+        fret.setTranslateX(xPos);
+        fret.setTranslateY(yPos);
         Path path = new Path(new MoveTo(0,0), new LineTo(0,-40));
         PathTransition pathTransition = new PathTransition();
         pathTransition.setDuration(Duration.millis(50));

@@ -2,6 +2,7 @@ import Animations.GLBackground;
 import Element.GuitarFret;
 import Element.Note;
 import Element.RedNote;
+import Element.ScoreBoard;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -53,25 +54,9 @@ public class GuitarLegendApp extends Application {
         GLBackground.startBgnd(gc);
 		theStage.show();
 
-		GuitarFret guitar  = new GuitarFret();
+		ScoreBoard sb = new ScoreBoard();
 
-		//guitar.drawFretExecution();
-        root.getChildren().add(guitar.getGroup());
-//        gNeck.setOnKeyPressed((event) -> {
-//			guitar.drawFretExecution();
-//			System.out.println(event);
-//		});
-//        gNeck.setOnKeyReleased(event -> {
-//        	System.out.println(event);
-//		});
-//        gNeck.setOnKeyTyped((event)->{System.out.println(event);});
-
-
-       	//guitar.drawFretExecution();
-       	//guitar.drawFretExecution();
-
-
-		//guitar.drawFretExecution();
+		root.getChildren().add(sb.getScoreBoard());
 
         GameLoop gl = new GameLoop(root);
         gl.start();
